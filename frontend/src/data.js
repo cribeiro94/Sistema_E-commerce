@@ -9,7 +9,7 @@ const data = {
             brand: 'Dell',
             rating: 5,
             numReviews:13,
-            description: 'Produto de qualidade e que oferece segurança ao seu trabalho.',
+            description: 'Produto de qualidade que oferece a melhor tecnologia e segurança ao seu trabalho.',
 
         },
         {
