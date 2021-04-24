@@ -83,8 +83,7 @@ export default function ProductScreen(props) {
                   <div>Qtd:</div>
                   <div>
                     <select value={qty} onChange={e => setQty(e.target.value)}>
-                      {
-                        [...Array(product.countInStock).keys()].map( 
+                      {[...Array(product.countInStock).keys()].map( 
                           (x) => (
                           <option key={x + 1} value={x + 1}>
                             {x + 1}
