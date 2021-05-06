@@ -1,5 +1,5 @@
 const data = {
-    products:[
+     products:[
         {
             _id: '1',
             name: 'Nootbook Dell Phonix 1TB',

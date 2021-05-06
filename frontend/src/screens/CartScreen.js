@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { addToCart } from '../actions/cartActions';
+import { addToCart, removeFromCart } from '../actions/cartActions';
 import MessageBox from '../components/MessageBox';
 
 export default function CartScreen(props) {
@@ -17,9 +17,15 @@ export default function CartScreen(props) {
         dispatch(addToCart(productId, qty));
       }
     }, [dispatch, productId, qty]);
+
     const removeFromCartHandler = (id) =>{
       // deletar produtos
-    }
+      dispatch(removeFromCart(id));
+    };
+
+    const checkoutHandler = () => {
+      props.history.push('/signin?redirect=shipping');
+    };
   return ( 
     <div className="row top">
       <div className="col-2">
@@ -47,16 +53,15 @@ export default function CartScreen(props) {
                       <select 
                       value={item.qty} 
                       onChange={(e) => 
-                      dispatch(addToCart(item.product), 
-                      Number(e.target.value)
-                      )}
+                      dispatch(addToCart(item.product, Number(e.target.value))                      
+                        )
+                       }
                       >
                         {[...Array(item.countInStock).keys()].map((x) => (
                           <option key={x + 1} value={x + 1}>
                             {x + 1}
                           </option>
-                        )
-                      )}
+                        ))}
                       </select>
                     </div>
                     <div>R$ {item.price}</div>
@@ -70,6 +75,28 @@ export default function CartScreen(props) {
           </ul>
         )
       }
+      </div>
+      <div className="col-1">
+        <div className="card card-body">
+          <ul>
+            <li>
+              <h2>
+                Subtotal ({cartItems.reduce((a, c) => a + c.qty, 0)} items) : R$ 
+                {cartItems.reduce((a, c) => a + c.price * c.qty, 0)}
+              </h2>
+            </li>
+            <li>
+              <button 
+              type="button" 
+              onClick={checkoutHandler} 
+              className="primary-block" 
+              disabled={cartItems.length === 0}
+              >
+                Finalizar a compra
+              </button>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );

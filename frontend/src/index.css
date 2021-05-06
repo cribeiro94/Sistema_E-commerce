@@ -94,7 +94,7 @@ button:hover {
   border: 0.1rem #404040 solid;
 }
 
-button.primary {
+button.primary-block {
   background-color: #f0c040;
 }
 
@@ -145,10 +145,19 @@ a.brand {
   flex: 2 1 50rem;
 }
 
+.min-30 {
+  max-width: 30rem;
+}
+
 /* Images */
 
 img {
   border-radius: 0.5rem;
+}
+
+img.small { 
+  max-width: 5rem;
+  width: 100;
 }
 
 img.medium {
