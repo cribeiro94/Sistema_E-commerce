@@ -11,7 +11,7 @@ mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/marketplay', {
 });
 
 app.use('/api/users', userRouter);
-app.use('api/products', productRouter);
+app.use('/api/products', productRouter);
 app.get('/', (req, res) => {
     res.send('Servidor está rodando');
 });

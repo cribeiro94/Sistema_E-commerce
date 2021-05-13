@@ -17,7 +17,6 @@ const data = {
     ],
     products: [
         {
-            
             name: 'Nootbook Dell Phonix 1TB',
             category: 'Eletronics',
             image: '/images/p1.jpg',
@@ -30,7 +29,6 @@ const data = {
 
         },
         {
-            
             name: 'Iphone 12 Pro Max Apple 256GB',
             category: 'Eletronics',
             image: '/images/p2.jpg',
@@ -43,7 +41,6 @@ const data = {
 
         },
         {
-            
             name: 'Fone Airpods com Estojo Apple',
             category: 'Eletronics',
             image: '/images/p3.jpg',
@@ -56,7 +53,6 @@ const data = {
 
         },
         {
-            
             name: 'Caixa de Som JBL com Bluetooth',
             category: 'Eletronics',
             image: '/images/p4.jpg',
@@ -69,7 +65,6 @@ const data = {
 
         },
         {
-            
             name: 'Smartwatch Relógio Inteligente',
             category: 'Eletronics',
             image: '/images/p5.jpg',
@@ -82,7 +77,6 @@ const data = {
 
         },
         {
-            
             name: 'Samsung Galaxy S20 128GB',
             category: 'Eletronics',
             image: '/images/p6.jpg',
@@ -94,8 +88,7 @@ const data = {
             description: 'Smartphone do seu jeito.',
 
         },
-        {
-            
+        {  
             name: 'MacBook Air Apple Intel Core i5',
             category: 'Eletronics',
             image: '/images/p7.jpg',
@@ -108,7 +101,6 @@ const data = {
 
         },
         {
-            
             name: 'Imac Apple Intel I5 256GB',
             category: 'Eletronics',
             image: '/images/p8.jpg',
