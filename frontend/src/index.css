@@ -59,7 +59,7 @@ a {
 }
 
 a:hover {
-  color: #203040;
+  color: #f0c040;
 }
 
 ul {
@@ -84,7 +84,7 @@ button {
   -moz-osx-font-smoothing: grayscale;
 }
 button {
-  background-color: #f8f8f8;
+  background-color: #f0c040;
   cursor: pointer;
 }
 input:hover, 
@@ -196,7 +196,7 @@ img.large {
 }
 
 .rating span:last-child{
-     color: #404040;
+     color: #f0c040;
 }
 
 /* Alerta */
@@ -222,4 +222,45 @@ img.large {
 .alert-danger {
   color: #ff0000;
   background-color: #ffe0e0e0;
+}
+
+/* Form */
+
+.form {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.form > div {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+
+.form label {
+  margin: 1rem 0;
+  display: block;
+}
+
+/* Dropdown */
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-content {
+  position: absolute;
+  display: none;
+  right: 0;
+  min-width: 12rem;
+  padding: 1rem;
+  z-index: 1;
+  background-color: #993399;
+  margin: 0;
+  margin-top: 0.4rem;
+  border-radius: 0.5rem;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
