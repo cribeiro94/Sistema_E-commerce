@@ -200,6 +200,10 @@ img.large {
 }
 
 /* Alerta */
+.loading {
+  display: block !important;
+}
+
 .success {
   color: #32CD32;
 }
