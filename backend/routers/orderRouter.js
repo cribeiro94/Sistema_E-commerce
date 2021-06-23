@@ -23,7 +23,7 @@ orderRouter.post(
             user: req.user._id,
         });
         const createdOrder = await order.save();
-        res.status(201).send({ message: 'Novo Pedido Criado.', order: createdOrder });
+        res.status(201).send({ message: 'Novo Pedido Gerado.', order: createdOrder });
     }
  })
 );
